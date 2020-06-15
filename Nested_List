@@ -1,0 +1,24 @@
+if __name__ == '__main__':
+    n = []
+    student = []
+    sc = []
+    studentscore=[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        student.append([name,score])
+        sc.append(score)
+        n.append(name)
+    
+l = set(sc)
+s = list(l)
+s.sort()
+second = s[1]
+for i in range(0,len(student)):
+    search = student[i]
+    if(search[1]==second):
+        studentscore.append(search[0])
+        
+studentscore.sort()
+for i in range(0,len(studentscore)):
+    print(studentscore[i])
